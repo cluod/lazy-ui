@@ -8,6 +8,7 @@ export default defineConfig({
   rewrites: {
     'docs/(.*)': '(.*)',
     'packages/lazy-ui/src/:comp/(.*)': 'components/:comp/(.*)',
+    'packages/utils/src/(.*)': 'utils/(.*)',
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -23,6 +24,12 @@ export default defineConfig({
         {
           text: 'Button',
           link: '/components/button/',
+        },
+      ],
+      '/utils/': [
+        {
+          text: 'utils',
+          link: '/utils/gen-class',
         },
       ],
     },
