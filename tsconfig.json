@@ -10,7 +10,15 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@lazy-ui/utils": ["packages/utils.src"]
+      "@tov-ui/utils": [
+        "packages/utils/src"
+      ],
+      "lazy-ui": [
+        "packages/lazy-ui/src"
+      ],
+      "lazy-ui/*": [
+        "packages/lazy-ui/src/*"
+      ]
     },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
@@ -24,5 +32,8 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitepress.json" }
+  ]
 }

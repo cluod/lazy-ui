@@ -1,9 +1,9 @@
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { defineConfig } from 'vite'
+import { vitepressDemo } from 'vite-plugin-vitepress-demo'
 
 // import vue from '@vitejs/plugin-vue'
-import { vitepressDemo } from 'vite-plugin-vitepress-demo'
 const baseUrl = fileURLToPath(new URL('.', import.meta.url))
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,8 +15,12 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: /^lazy-ui/,
+        replacement: path.resolve(baseUrl, 'packages/lazy-ui/src'),
+      },
+      {
         find: /^@lazy-ui\/utils/,
-        repalcement: path.resolve(baseUrl, 'packages/utils/src'),
+        replacement: path.resolve(baseUrl, 'packages/utils/src'),
       },
     ],
   },

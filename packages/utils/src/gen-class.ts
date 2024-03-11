@@ -18,7 +18,7 @@ export function useClassnames(componentName: string) {
             return `${prev}--${arg1}`
         }
         return `${prev}-${cur}`
-      }, componentClass)
+      }, componentClass) as string
     }
     else {
       return componentClass

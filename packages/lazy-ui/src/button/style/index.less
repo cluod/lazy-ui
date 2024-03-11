@@ -1,0 +1,75 @@
+@import '../../style/index.less';
+.lazy-button{
+    background: none;
+    cursor: pointer;
+    border: 1px solid var(--lazy-color-border);
+    outline: none;
+    color: inherit;
+    padding: 4px 8px;
+    border-radius: 4px;
+    height: 32px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    &-size{
+       &--small{
+        height: 24px;
+        padding: 2px 4px;
+        font-size: 12px;
+       } 
+       &--large{
+        height: 40px;
+        padding: 6px 12px;
+        font-size: 20px;
+       } 
+    }
+    &:disabled{
+        cursor: not-allowed;
+        border-color: #d9d9d9;
+        color: #bfbfbf;
+        background-color: #f0f0f0;
+    }
+
+    &--default{
+        border-color:var(--lazy-color-border);
+        color: var(--lazy-color-text);
+        &:hover{
+            border-color:var(--lazy-color-primary-hover);
+            color: var(--lazy-color-primary-hover); 
+        }
+        &:active{
+            border-color:var(--lazy-color-primary-active);
+            color: var(--lazy-color-primary-active); 
+        }
+    }
+    
+
+    &--dashed{
+        border-style: dashed;
+        border-color:var(--lazy-color-border);
+        color: var(--lazy-color-text);
+        &:hover{
+            border-color:var(--lazy-color-primary-hover);
+            color: var(--lazy-color-primary-hover); 
+        }
+        &:active{
+            border-color:var(--lazy-color-primary-active);
+            color: var(--lazy-color-primary-active); 
+        }
+    }
+
+    &--primary{
+        border-color:var(--lazy-color-primary);
+        color: white;
+        background-color: var(--lazy-color-primary);
+        &:hover{
+            border-color:var(--lazy-color-primary-hover);
+            background-color: var(--lazy-color-primary-hover);
+        }
+        &:active{
+            border-color:var(--lazy-color-primary-active);
+            background-color: var(--lazy-color-primary-active);
+        }
+    }
+    
+}

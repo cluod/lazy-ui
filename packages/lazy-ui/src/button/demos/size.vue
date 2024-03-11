@@ -1,7 +1,9 @@
 <docs>
 ---
-title: 基础使用
+title: 按钮大小
 ---
+
+通过size属性调整
 </docs>
 
 <script setup lang="ts">
@@ -12,13 +14,13 @@ function handleClick() {
 
 <template>
   <div>
-    <l-button @click="handleClick">
-      按钮1
-    </l-button>
-    <l-button type="dashed">
+    <l-button size="small" @handle-click="handleClick">
       按钮2
     </l-button>
-    <l-button type="primary">
+    <l-button size="default">
+      按钮1
+    </l-button>
+    <l-button size="large">
       按钮3
     </l-button>
   </div>
