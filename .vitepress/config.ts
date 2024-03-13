@@ -22,8 +22,12 @@ export default defineConfig({
     sidebar: {
       '/components/': [
         {
-          text: 'Button',
+          text: '按钮',
           link: '/components/button/',
+        },
+        {
+          text: '输入框',
+          link: '/components/input/',
         },
       ],
       '/utils/': [
